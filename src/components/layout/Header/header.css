@@ -1,0 +1,33 @@
+header{
+    background-color: #DF2E3F ;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+img{
+    width: 30%;
+}
+
+nav{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.principal{
+    background: white;
+    color: #DF2E3F;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
