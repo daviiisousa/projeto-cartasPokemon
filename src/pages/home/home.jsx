@@ -56,7 +56,7 @@ export const Home = () => {
           <div className="divForm">
               <label htmlFor="nome">Nome:</label>
               <input
-                placeholder="digite o nome do seu pokemon"
+                placeholder="Digite o nome do seu pokemon"
                 type="text"
                 name="nome"
                 id="nome"
@@ -80,7 +80,7 @@ export const Home = () => {
           <div className="divForm">
               <label htmlFor="classe">Classe:</label>
               <input
-                placeholder="digite a classe do seu pokemon"
+                placeholder="Digite a classe do seu pokemon"
                 type="text"
                 name="classe"
                 id="classe"
