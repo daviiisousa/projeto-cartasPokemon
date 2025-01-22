@@ -9,6 +9,10 @@ header{
 
 img{
     width: 30%;
+<<<<<<< HEAD
+=======
+    padding: 0px 0px 18px 0px;
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 }
 
 nav{
@@ -20,9 +24,18 @@ nav{
 
 .link{
     text-decoration: none;
+<<<<<<< HEAD
     font-size: 24px;
     color: white;
     font-weight: 600;
+=======
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+    background: gray;
+    padding: 12px 24px;
+    border-radius: 8px;
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 }
 
 .principal{
@@ -30,4 +43,19 @@ nav{
     color: #DF2E3F;
     padding: 12px 24px;
     border-radius: 8px;
+<<<<<<< HEAD
+=======
+    font-size: 26px;
+}
+
+.link-metade{
+color: aliceblue;
+background: black;
+padding: 12px 24px;
+border-radius: 8px;
+font-size: 26px;
+text-decoration: none;
+font-weight: 600;
+
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 }

@@ -1,19 +1,28 @@
 import { useState } from "react";
 import { Header } from "../../components/layout/Header/header";
 
+<<<<<<< HEAD
 import './home.css'
+=======
+import "./home.css";
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 import { BtnCriar } from "../../components/butoes/btnCriar/btnCriar";
 
 export const Home = () => {
   const [nome, setNome] = useState("");
   const [tipo, setTipo] = useState("");
   const [classe, setClasse] = useState("");
+<<<<<<< HEAD
+=======
+  const [imagem, setImagem] = useState("");
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 
   async function alimentarApi() {
     const payload = {
       nome,
       classe,
       tipo,
+<<<<<<< HEAD
     };
 
     try {
@@ -24,6 +33,22 @@ export const Home = () => {
         },
         body: JSON.stringify(payload),
       });
+=======
+      imagem,
+    };
+
+    try {
+      const result = await fetch(
+        "https://678d4297f067bf9e24e9cec3.mockapi.io/cartas",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 
       if (!result.ok) {
         throw new Error("Erro ao enviar os dados para a API");
@@ -32,12 +57,20 @@ export const Home = () => {
       const data = await result.json();
       console.log("Sucesso:", data);
 
+<<<<<<< HEAD
       alert('carta criada')
+=======
+      alert("Carta criada!");
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
 
       // Limpa os campos após o envio
       setNome("");
       setTipo("");
       setClasse("");
+<<<<<<< HEAD
+=======
+      setImagem("");
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
     } catch (error) {
       console.error("Erro:", error.message);
     }
@@ -54,6 +87,7 @@ export const Home = () => {
           }}
         >
           <div className="divForm">
+<<<<<<< HEAD
               <label htmlFor="nome">Nome:</label>
               <input
                 placeholder="Digite o nome do seu pokemon"
@@ -88,6 +122,54 @@ export const Home = () => {
                 onChange={(e) => setClasse(e.target.value)}
                 required
               />
+=======
+            <label htmlFor="nome">Nome:</label>
+            <input
+              placeholder="Digite o nome do seu pokemon"
+              type="text"
+              name="nome"
+              id="nome"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              required
+            />
+          </div>
+          <div className="divForm">
+            <label htmlFor="tipo">Tipo:</label>
+            <input
+              placeholder="Digite o tipo do seu pokemon"
+              type="text"
+              name="tipo"
+              id="tipo"
+              value={tipo}
+              onChange={(e) => setTipo(e.target.value)}
+              required
+            />
+          </div>
+          <div className="divForm">
+            <label htmlFor="classe">Classe:</label>
+            <input
+              placeholder="Digite a classe do seu pokemon"
+              type="text"
+              name="classe"
+              id="classe"
+              value={classe}
+              onChange={(e) => setClasse(e.target.value)}
+              required
+            />
+          </div>
+          <div className="divForm">
+            <label htmlFor="imagem">Imagem (URL):</label>
+            <input
+              placeholder="Insira o link da imagem"
+              type="url"
+              name="imagem"
+              id="imagem"
+              value={imagem}
+              onChange={(e) => setImagem(e.target.value)}
+              required
+            />
+>>>>>>> c654a75cc526ab74ef6e3a1534947b40013d4117
           </div>
           <BtnCriar>CRIAR</BtnCriar>
         </form>
