@@ -1,4 +1,4 @@
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -8,19 +8,19 @@ form{
     padding: 20px;
 }
 
-.divForm{
+.divForm {
     display: flex;
     flex-direction: column;
+}
 
-    label{
-        margin-bottom: 10px;
-        font-size: 24px;
-        font-weight: 600;
-    }
+.divForm label {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
 
-    input{
-        border-radius: 8px;
-        padding: 8px;
-        font-size: 18px;
-    }
+.divForm input {
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 18px;
 }
