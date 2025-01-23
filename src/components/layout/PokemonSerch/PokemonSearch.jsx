@@ -95,7 +95,7 @@ const PesquisaPokemon = () => {
         placeholder="Digite o nome do Pokémon"
       />
       <br />
-      <button onClick={buscarPokemon}>Buscar</button>
+      <button onClick={buscarPokemon}>BUSCAR</button>
 
       {/* Exibir erro se houver */}
       {erro && <p className="error-message">{erro}</p>}

@@ -1,5 +1,5 @@
-header {
-    background-color: #DF2E3F;
+header{
+    background-color: #DF2E3F ;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -7,12 +7,11 @@ header {
     flex-direction: column;
 }
 
-img {
+img{
     width: 30%;
-    padding: 0px 0px 18px 0px;
 }
 
-nav {
+nav{
     padding: 20px 0px;
     display: flex;
     align-items: center;
@@ -21,28 +20,32 @@ nav {
 
 .link {
     text-decoration: none;
-    font-size: 26px;
+    font-size: 24px;
     color: white;
     font-weight: 600;
-    background: gray;
-    padding: 12px 24px;
-    border-radius: 8px;
+    position: relative;
 }
 
-.principal {
+.link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.principal{
     background: white;
     color: #DF2E3F;
     padding: 12px 24px;
     border-radius: 8px;
-    font-size: 26px;
-}
-
-.link-metade {
-    color: aliceblue;
-    background: black;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 26px;
-    text-decoration: none;
-    font-weight: 600;
 }

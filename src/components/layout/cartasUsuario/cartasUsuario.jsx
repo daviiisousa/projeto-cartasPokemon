@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Header } from "../header";
+import { Header } from "../Header/header";
 
 import "./CartasUsuarios.css";
 

@@ -9,9 +9,9 @@ export const Header = () => {
         <img src={pokemonFoto} alt="pokemon logo" />
         <nav>
           <Link className="link principal" to={"/"}>
-            Criar carta
+            criar carta
           </Link>
-          <Link className="link-metade" to={"/cartas"}>
+          <Link className="link" to={"/cartas"}>
             Cartas
           </Link>
           <Link className="link" to={"/cartas-usuario"}>
