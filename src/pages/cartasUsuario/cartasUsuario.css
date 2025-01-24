@@ -1,0 +1,39 @@
+.cartasUsuario{
+    margin: 100px 350px;
+}
+
+.cartas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas iguais */
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carta {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.5s ease-in-out;
+}
+
+.carta:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.nomeCarta{
+    text-align: center;
+}
+
+.imgCarta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricaoCarta{
+    font-weight: 700;
+    font-size: 18px;
+}

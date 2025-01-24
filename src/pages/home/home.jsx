@@ -94,18 +94,6 @@ export const Home = () => {
               required
             />
           </div>
-          <div className="divForm">
-            <label htmlFor="imagem">Imagem (URL):</label>
-            <input
-              placeholder="Insira o link da imagem"
-              type="url"
-              name="imagem"
-              id="imagem"
-              value={imagem}
-              onChange={(e) => setImagem(e.target.value)}
-              required
-            />
-          </div>
           <BtnCriar>CRIAR</BtnCriar>
         </form>
       </main>
