@@ -29,20 +29,30 @@ export const CartasUsuarios = () => {
     <>
       <Header />
       <main className="cartasUsuario">
-        <div className="cartas">
-          {cartas.map((carta) => (
-            <>
-              <div className="carta">
-                <h2 className="nomeCarta">{carta.nome}</h2>
-                <span className="imgCarta">
-                  <img src={ditto} alt="ditto" />
-                </span>
-                <p><span className="descricaoCarta">Tipo: </span>{carta.tipo}</p>
-                <p><span className="descricaoCarta">Classe:</span> {carta.classe} </p>
-              </div>
-            </>
-          ))}
-        </div>
+        {cartas.length ? (
+          <div className="cartas">
+            {cartas.map((carta) => (
+              <>
+                <div className="carta">
+                  <h2 className="nomeCarta">{carta.nome}</h2>
+                  <span className="imgCarta">
+                    <img src={ditto} alt="ditto" />
+                  </span>
+                  <p>
+                    <span className="descricaoCarta">Tipo: </span>
+                    {carta.tipo}
+                  </p>
+                  <p>
+                    <span className="descricaoCarta">Classe:</span>{" "}
+                    {carta.classe}{" "}
+                  </p>
+                </div>
+              </>
+            ))}
+          </div>
+        ) : (
+          <p className="pAlert">Voce nao tem cartas</p>
+        )}
       </main>
     </>
   );

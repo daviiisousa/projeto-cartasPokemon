@@ -37,3 +37,9 @@
     font-weight: 700;
     font-size: 18px;
 }
+
+.pAlert{
+    color: red;
+    text-align: center;
+    font-size: 34px;
+}
