@@ -13,7 +13,7 @@ export const CartasUsuarios = () => {
         "https://678d4297f067bf9e24e9cec3.mockapi.io/cartas"
       );
       if (!result.ok) {
-        alert("Erro na requisao da api");
+        alert("Erro na requisição da API");
       }
       const data = await result.json();
       setCartas(data);
@@ -21,6 +21,23 @@ export const CartasUsuarios = () => {
       alert("Erro no servidor: ", error);
     }
   }
+
+  async function deletarCarta(id) {
+    try {
+      const result = await fetch(
+        `https://678d4297f067bf9e24e9cec3.mockapi.io/cartas/${id}`,
+        { method: "DELETE" }
+      );
+      if (!result.ok) {
+        alert("Erro na requisição da API");
+      }
+      // Atualiza a lista de cartas após a exclusão
+      setCartas(cartas.filter((carta) => carta.id !== id));
+    } catch (error) {
+      alert("Erro no servidor: ", error);
+    }
+  }
+
   useEffect(() => {
     getCartas();
   }, []);
@@ -32,26 +49,24 @@ export const CartasUsuarios = () => {
         {cartas.length ? (
           <div className="cartas">
             {cartas.map((carta) => (
-              <>
-                <div className="carta">
-                  <h2 className="nomeCarta">{carta.nome}</h2>
-                  <span className="imgCarta">
-                    <img src={ditto} alt="ditto" />
-                  </span>
-                  <p>
-                    <span className="descricaoCarta">Tipo: </span>
-                    {carta.tipo}
-                  </p>
-                  <p>
-                    <span className="descricaoCarta">Classe:</span>{" "}
-                    {carta.classe}{" "}
-                  </p>
-                </div>
-              </>
+              <div key={carta.id} className="carta">
+                <h2 className="nomeCarta">{carta.nome}</h2>
+                <span className="imgCarta">
+                  <img src={ditto} alt="ditto" />
+                </span>
+                <p>
+                  <span className="descricaoCarta">Tipo: </span>
+                  {carta.tipo}
+                </p>
+                <p>
+                  <span className="descricaoCarta">Classe:</span> {carta.classe}
+                </p>
+                <button onClick={() => deletarCarta(carta.id)}>Deletar</button>
+              </div>
             ))}
           </div>
         ) : (
-          <p className="pAlert">Voce nao tem cartas</p>
+          <p className="pAlert">Você não tem cartas</p>
         )}
       </main>
     </>
