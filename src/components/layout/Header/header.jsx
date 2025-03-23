@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import pokemonFoto from "../../../assets/PokemonLogo.png";
+import pokemonFoto from "../../../assets/pokemon/pokemonLogo.png";
 import "./header.css";
 
 export const Header = () => {
