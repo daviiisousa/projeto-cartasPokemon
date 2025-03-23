@@ -33,7 +33,7 @@ export const CartasUsuarios = () => {
           <div className="cartas">
             {cartas.map((carta) => (
               <>
-                <div className="carta">
+                <div key={carta.id} className="carta">
                   <h2 className="nomeCarta">{carta.nome}</h2>
                   <span className="imgCarta">
                     <img src={ditto} alt="ditto" />
